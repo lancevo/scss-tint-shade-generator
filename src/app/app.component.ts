@@ -7,7 +7,7 @@ import { shade, tint } from './colors';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  baseColor = '008cdb';
+  inputColor = '008cdb';
 
   scssColors = {
     shade5: '',
@@ -19,17 +19,18 @@ export class AppComponent {
     tint2: '',
     tint3: '',
     tint4: '',
-    tint5: ''
+    tint5: '',
+    baseColor: ''
   };
 
   constructor(private ref: ChangeDetectorRef) {}
 
   shade(i) {
-    return shade(this.baseColor, i * 10);
+    return shade(this.inputColor, i * 10);
   }
 
   tint(i) {
-    return tint(this.baseColor, i * 10);
+    return tint(this.inputColor, i * 10);
   }
 
   setColorsObject(hex: string, prop) {
