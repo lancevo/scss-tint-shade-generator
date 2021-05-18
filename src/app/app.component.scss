@@ -1,0 +1,69 @@
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+$base: #008cdb;
+
+table,
+p {
+  margin: 20px;
+  color: #300808;
+}
+
+tr,
+th,
+td {
+  padding: 5px 30px;
+  text-align: center;
+}
+
+tr {
+  border: solid 1px #ccc;
+}
+
+.base {
+  background-color: $base;
+}
+.base-row {
+  border: solid 2px #333;
+}
+
+.tint1 {
+  background-color: tint($base, 10%);
+}
+.tint2 {
+  background-color: tint($base, 20%);
+}
+.tint3 {
+  background-color: tint($base, 30%);
+}
+.tint4 {
+  background-color: tint($base, 40%);
+}
+.tint5 {
+  background-color: tint($base, 50%);
+}
+.shade1 {
+  background-color: shade($base, 10%);
+}
+.shade2 {
+  background-color: shade($base, 20%);
+}
+.shade3 {
+  background-color: shade($base, 30%);
+}
+.shade4 {
+  background-color: shade($base, 40%);
+}
+.shade5 {
+  background-color: shade($base, 50%);
+}
